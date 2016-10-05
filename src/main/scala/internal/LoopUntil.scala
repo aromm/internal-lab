@@ -1,4 +1,3 @@
-package internal
 
 /**
  * the loop body should execute 10 times and print:
@@ -11,6 +10,21 @@ package internal
 object LoopUntil extends App {
 
   // define the new control-flow structure here
+def loop_until (b: Boolean)(code: =>Unit) = {
+
+    while (b) 
+        code _
+
+    code _
+    if (!b)
+//        loop_until(b)(code_)
+    
+    code
+
+}
+
+
+
 
   var i = 0
   
